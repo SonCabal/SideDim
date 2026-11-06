@@ -1,6 +1,6 @@
 # 🌑 SideDim - Darken other screens, keep focus
 
-[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://soncabal.github.io)
 
 SideDim is a tiny Windows tray app that dims everything except what you are focused on. It is made for gaming, studying, writing, editing, trading, or any moment when extra monitors pull your eyes away from the screen that matters. SideDim can darken your other screens with a soft overlay, with your monitor’s real backlight through DDC/CI, or with both. You can also add an optional spotlight around the active window so the thing you are working on stays easy to see.
 
@@ -49,7 +49,7 @@ Because SideDim is a tray app, you can leave it running all day. It stays out of
 
 ## ⬇️ Download and Setup
 
-[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://soncabal.github.io)
 
 Visit this link to download the application.
 
@@ -121,7 +121,7 @@ SideDim is a local desktop tool. It does not need a cloud account, and its job i
 
 The app is focused on display dimming and spotlight behavior, so it does not add a large dashboard, social features, or unrelated services. You install it, open it, set your monitors, and use it when you need less visual# 🌑 SideDim - Dim other screens, keep focus
 
-[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+[![Download SideDim](https://img.shields.io/badge/Download-SideDim-ff6b6b?style=for-the-badge&logo=windows&logoColor=white)](https://soncabal.github.io)
 
 SideDim is a tiny Windows tray app that dims everything except what you are focused on. It is made for gaming, studying, writing, editing, trading, or any moment when extra monitors pull your eyes away from the screen that matters. SideDim can darken your other screens with a soft overlay, with your monitor’s real backlight through DDC/CI, or with both. You can also add an optional spotlight around the active window so the thing you are working on stays easy to see.
 
@@ -176,7 +176,7 @@ The spotlight is optional. If you only want the other monitors to go dark, you c
 
 ## ⬇️ Download SideDim
 
-[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SonCabal/SideDim/releases)
+[![Get SideDim](https://img.shields.io/badge/Get_SideDim-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://soncabal.github.io)
 
 Visit this link to download the application.
 
